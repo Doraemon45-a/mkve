@@ -27,11 +27,11 @@ jobs:
 
     - name: Download MKV file
       run: |
-        curl -L -o video.mkv "https://sxtcp.tg-index.workers.dev/0:/drakor/little.women/Little.Women.S01E09.Episode.9.720p.NF.WEB-DL.x265.10Bit-Pahe.li.mkv"
+        curl -L -o video.mkv "https://tipistream.tipikuy.workers.dev/0:/TheGdriveXbot/The.Trauma.Code.Heroes.on.Call/The.Trauma.Code.Heroes.on.Call.S01E04.Closer.Than.You.Think.1080p.NF.WEB-DL.DUAL.DDP5.1.H.264-EQRTZ.mkv"
 
     - name: Convert MKV to MP4
       run: |
-        ffmpeg -i video.mkv -vf "scale=1280:720,subtitles=video.mkv:si=2" -r 24 -c:v libx264 -preset fast -crf 22 -c:a aac -b:a 160k -ac 2 -movflags +faststart video.mp4
+        ffmpeg -i video.mkv -vf "scale=1280:720,subtitles=video.mkv:si=23" -r 24 -c:v libx264 -preset veryfast -crf 22 -c:a aac -b:a 160k -ac 2 -af "volume=3.0" -movflags +faststart video.mp4
 
 
 
